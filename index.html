@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Loja de Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>🎮 GAME<span>ZONE</span></h2>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#jogos">Jogos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+        <button id="abrirCarrinho">
+            🛒 Carrinho (<span id="quantidade">0</span>)
+        </button>
+    </header>
+
+    <section class="hero" id="inicio">
+        <p>SUA LOJA GAMER</p>
+        <h1>Seu próximo jogo<br><span>está aqui!</span></h1>
+        <p>Encontre jogos incríveis para sua próxima aventura.</p>
+        <a class="botao" href="#jogos">Explorar jogos →</a>
+    </section>
+
+    <main id="jogos">
+        <h2>🎮 Catálogo de jogos</h2>
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="Pesquisar jogo..."
+        >
+
+        <div id="catalogo" class="catalogo"></div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre a GameZone</h2>
+        <p>
+            A GameZone é uma loja de games criada para facilitar
+            a busca por jogos de diferentes plataformas.
+        </p>
+        <p>Projeto escolar — Grupo 3 — Desenvolvimento de Sistemas.</p>
+    </section>
+
+    <div id="painelCarrinho" class="painel">
+        <button id="fecharCarrinho">✖ Fechar</button>
+        <h2>Meu carrinho</h2>
+        <div id="itensCarrinho"></div>
+        <h3>Total: <span id="total">R$ 0,00</span></h3>
+
+        <form id="formCompra">
+            <input id="nomeCliente" placeholder="Seu nome" required>
+            <input id="emailCliente" type="email"
+                   placeholder="Seu e-mail" required>
+            <button class="botao" type="submit">
+                Registrar pedido
+            </button>
+        </form>
+
+        <p id="mensagem"></p>
+        <small>Projeto demonstrativo: não aceita pagamentos reais.</small>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

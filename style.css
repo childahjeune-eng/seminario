@@ -1,0 +1,231 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #0b0d1b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 6%;
+    background: #15182d;
+    border-bottom: 1px solid #34304d;
+}
+
+header h2 {
+    font-size: 22px;
+}
+
+header h2 span {
+    color: #b06cff;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #45ead3;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#abrirCarrinho {
+    background: #29213d;
+    color: white;
+}
+
+.hero {
+    padding: 75px 8%;
+    background: radial-gradient(
+        circle at right,
+        #49266b,
+        #0b0d1b 65%
+    );
+}
+
+.hero > p:first-child {
+    color: #45ead3;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #b06cff;
+}
+
+.hero p {
+    color: #c0c2d5;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 18px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    background: #9c59e8;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    padding: 45px 7%;
+}
+
+main h2, .sobre h2 {
+    color: #d8baff;
+}
+
+#pesquisa {
+    width: 100%;
+    max-width: 400px;
+    padding: 13px;
+    margin: 15px 0 25px;
+    background: #15182d;
+    color: white;
+    border: 1px solid #34304d;
+    border-radius: 8px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.jogo {
+    padding: 18px;
+    background: #15182d;
+    border: 1px solid #34304d;
+    border-radius: 12px;
+}
+
+.jogo h3 {
+    color: #45ead3;
+}
+
+.jogo p {
+    color: #c0c2d5;
+}
+
+.jogo .preco {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.jogo button {
+    background: #9c59e8;
+    color: white;
+}
+
+.sobre {
+    margin: 20px 7% 60px;
+    padding: 25px;
+    background: #15182d;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+.painel {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: min(420px, 100%);
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px;
+    background: #15182d;
+    border-left: 2px solid #9c59e8;
+    z-index: 10;
+}
+
+.painel.aberto {
+    display: block;
+}
+
+#itensCarrinho {
+    margin: 20px 0;
+}
+
+.item-carrinho {
+    padding: 12px 0;
+    border-bottom: 1px solid #34304d;
+}
+
+#formCompra input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #34304d;
+    border-radius: 8px;
+    background: #0b0d1b;
+    color: white;
+}
+
+#formCompra .botao {
+    width: 100%;
+}
+
+#mensagem {
+    color: #45ead3;
+}
+
+@media (max-width: 850px) {
+    .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+}
